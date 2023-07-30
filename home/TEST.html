@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Autres balises <meta>, <title>, <link>, etc. -->
+
+    <!-- Inclure la bibliothèque js-sha256 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+
+    <style>
+        /* Style pour centrer le texte */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #hashResult {
+            font-size: 24px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Élément pour afficher le résultat -->
+    <p id="hashResult"></p>
+
+    <script>
+        // Fonction pour obtenir le hachage SHA-256 d'une chaîne
+        function getSHA256Hash(input) {
+            return sha256(input);
+        }
+
+        // Exemple d'utilisation :
+        const inputString = "khenifrapec23@";
+        const hashedString = getSHA256Hash(inputString);
+
+        // Afficher le hachage dans l'élément #hashResult
+        document.getElementById('hashResult').innerText = hashedString;
+    </script>
+</body>
+</html>
