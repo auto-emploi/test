@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (hashedID === storedHashedID && hashedPassword === storedHashedPassword) {
       // Rediriger vers une autre page si la vérification est réussie
-      window.location.href = 'https://auto-emploi.github.io/test/home/home.html';
+      window.location.href = 'https://auto-emploi.github.io/test/home/index.html';
     } else {
       // Afficher un message d'erreur si la vérification échoue
       const errorMessage = document.querySelector('.error-message');
